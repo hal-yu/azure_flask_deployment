@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+<html lang="en">
+
+{% block content %}
+
+    <section>
+        <h2 class="text-xl mb-2"> Dataset preview using a TABLE in HTML</h2>
+        <table class="table-auto">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Pregnancies</th>
+                    <th class="px-4 py-2">Glucose</th>
+                    <th class="px-4 py-2">BloodPressure</th>
+                    <th class="px-4 py-2">SkinThickness</th>
+                    <th class="px-4 py-2">Insulin</th>
+                    <th class="px-4 py-2">BMI</th>
+                    <th class="px-4 py-2">Diabetes Pedigree Function</th>
+                    <th class="px-4 py-2">Age</th>
+                    <th class="px-4 py-2">Outcome</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for diabetes in diabetes.values %}
+                <tr>
+                    <td class="border px-4 py-2">{{ diabetes[0] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[1] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[2] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[3] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[4] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[5] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[6] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[7] }}</td>
+                    <td class="border px-4 py-2">{{ diabetes[8] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+{% endblock %}
